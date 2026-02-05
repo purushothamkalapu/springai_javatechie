@@ -20,4 +20,8 @@ public class MultiModelChatController {
     public String chatWithOllamaAI(@RequestParam("message") String message){
         return multiModelChatService.chatWithOllama(message);
     }
+    @GetMapping("/chat/googlegenai")
+    public String chatWithGoogleGenAI(@RequestParam("message") String message){
+        return multiModelChatService.chatWithGoogleGenAi(message);
+    }
 }
