@@ -1,3 +1,4 @@
+/*
 package com.purushotham.spring_openai_demo.controller;
 
 import com.purushotham.spring_openai_demo.service.OpenAiChatService;
@@ -21,3 +22,4 @@ public class OpenAiChatController {
         return openAiChatService.chatClientOpenAiLLM(message);
     }
 }
+*/

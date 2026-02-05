@@ -1,3 +1,4 @@
+/*
 package com.purushotham.spring_openai_demo.service;
 
 import org.springframework.ai.chat.client.ChatClient;
@@ -16,3 +17,4 @@ public class OpenAiChatService {
                 .content();
     }
 }
+*/
