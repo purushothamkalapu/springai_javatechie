@@ -11,7 +11,9 @@ public class OpenAiChatService {
         this.chatClient = chatClientBuilder.build();
     }
     public String chatClientOpenAiLLM(String message){
-        return chatClient.prompt(message)
+        return chatClient
+                //All type message roles(Prompt)
+                .prompt(message)
                 .call()
                 .content();
     }
