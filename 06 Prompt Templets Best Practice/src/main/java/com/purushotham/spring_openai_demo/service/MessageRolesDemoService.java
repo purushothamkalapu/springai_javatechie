@@ -70,5 +70,27 @@ public class MessageRolesDemoService {
                         """.formatted(CLAIM_DETAILS,message)).call()
                 .chatResponse();
     }
+    /*Guide me on Tech stack*/
+    public String guideMeTechStack(String message){
+        return chatClient.prompt()
+                .system("""
+                        You are a tech stack assistant.
+                        give best answer to the student and make sure your answer will be to
+                        the point. 
+                        """)
+                .user(message).call().content();
+    }
+    /*Guide me on Tech stack*/
+    public String guideMeTechStackUsingPrompt(String topic,
+                                              String level,
+                                              int points){
+        return chatClient.prompt()
+                .system("""
+                        You are a tech stack assistant.
+                        give best answer to the student and make sure your answer will be to
+                        the point. 
+                        """)
+                .user("Explain me "+topic+" in "+level+" level with "+points).call().content();
+    }
 
 }

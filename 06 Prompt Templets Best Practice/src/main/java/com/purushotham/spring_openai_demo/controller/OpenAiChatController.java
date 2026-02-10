@@ -28,4 +28,14 @@ public class OpenAiChatController {
     public ChatResponse checkInsurancePolicy(@RequestParam String message){
         return messageRolesDemoService.checkPolicyInsuranceV3Policy(message);
     }
+    @GetMapping("/guide")
+    public String checkTechStack(@RequestParam String message){
+        return messageRolesDemoService.guideMeTechStack(message);
+    }
+    @GetMapping("/guideWithPrompt")
+    public String checkTechStackWithPrompt(@RequestParam String topic,
+                                           @RequestParam String level,
+                                           @RequestParam int points){
+        return messageRolesDemoService.guideMeTechStackUsingPrompt(topic, level, points);
+    }
 }

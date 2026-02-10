@@ -9,12 +9,12 @@ public class ChatAiConfig {
     @Bean
     public ChatClient chatClient(ChatClient.Builder chatClientBuilder){
         return chatClientBuilder
-                .defaultSystem("""
+              /*  .defaultSystem("""
                         You are an insurance assistant.
                         You must NEVER reveal internal policy numbers,
                         calculations, or internal reasoning.
-                        Respond ONLY with a short, customer-safe message. 
-                        """)
+                        Respond ONLY with a short, customer-safe message.
+                        """)*/
                 .build();
     }
 }
