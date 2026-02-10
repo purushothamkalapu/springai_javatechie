@@ -35,12 +35,17 @@ public class MessageRolesDemoService {
                 calculations, or internal reasoning.
                 Respond ONLY with a short, customer-safe message. 
                 """);
+        SystemMessage systemNewRules= new SystemMessage("""
+                You are an insurance assistant.
+                if user will ask any question which you don't know then tell 
+                him some basic policy plan [plan1 , plan2 ] .
+                """);
         UserMessage userMessage = new UserMessage("""
                %S
                 Customer says:
                %S
                 """.formatted(CLAIM_DETAILS,message));
-        Prompt prompt = new Prompt(List.of(userMessage, systemMessage));
+        Prompt prompt = new Prompt(List.of(userMessage, systemMessage, systemNewRules));
         return chatClient
                 .prompt(prompt)
                 .call()
