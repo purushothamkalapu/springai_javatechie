@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: spring-openai-demo
+
+
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+
+
+logging:
+  pattern:
+    console: '%d{HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n'
