@@ -28,7 +28,7 @@ public class OpenAiChatController {
     public String chat(@RequestParam String message){
         return openAiChatService.askToAI(message);
     }
-    @GetMapping(value = "/chatStream", produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
+    @GetMapping(value = "/chatStream", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
     public Flux<String> chatStream(@RequestParam String message){
         return openAiChatService.askToAIStream(message);
     }
